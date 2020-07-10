@@ -9,6 +9,7 @@
   (GET "/" [] (index-view/index-page))
   (GET "/test/:id" [id] (index-view/test-page id))
   (GET "/request" request (str (get (request :params) :name1)))
+  (GET "/params-test" request (index-view/params-test request ))
   (route/resources "/")
   (route/not-found "Page not found"))
 
@@ -16,7 +17,7 @@
   (handler/site app-routes)
   )
   
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
+
+
+
+

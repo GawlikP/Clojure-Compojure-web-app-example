@@ -27,12 +27,18 @@
 )
 (defn params-test
   [params]
+    
   (html5
     [:html
     [:head]
     [:body
-      
-     ]
+     [:h1
+      (if (= (get(params :params) :name1) "test")
+        (list [:p "Ty to dziala"])
+        (list [:p "No chyba nie wpisales test"])
+        )   
+      ] 
+    ]
      ]
     )
   )
